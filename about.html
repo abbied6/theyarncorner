@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Yarn Corner - About Us</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            tailwind.config = {
+                corePlugins: {
+                    preflight: false
+                }
+            };
+        </script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="bg-[#E5D7C4] p-5">
+        <nav class="bg-[#6B705C] p-4 mb-5 text-right rounded-md">
+            <div class="top-controls mb-2">
+                <div class="lang-switcher" aria-label="Language Switcher" data-i18n-aria-label="nav.languageSwitcher"> 
+                    <button class="px-3 py-1.5 rounded-md border border-[#6B705C] bg-[#E5D7C4] text-[#6B705C] font-bold" type="button" onclick="setLanguage('en')">English</button> 
+                    <button class="px-3 py-1.5 rounded-md border border-[#6B705C] bg-[#E5D7C4] text-[#6B705C] font-bold" type="button" onclick="setLanguage('es')">Español</button> 
+                    <button class="px-3 py-1.5 rounded-md border border-[#6B705C] bg-[#E5D7C4] text-[#6B705C] font-bold" type="button" onclick="setLanguage('fr')">Français</button> 
+                </div>
+            </div>
+            <ul class="flex flex-wrap justify-end gap-6">
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span data-i18n="nav.home">Home</span></a></li>
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="crochet.html"><i class="fa-solid fa-scissors" aria-hidden="true"></i><span data-i18n="nav.crochet">Crochet</span></a></li>
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="knit.html"><i class="fa-solid fa-shirt" aria-hidden="true"></i><span data-i18n="nav.knit">Knit</span></a></li>
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="patterns.html"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span data-i18n="nav.patterns">Patterns</span></a></li>
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="about.html"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span data-i18n="nav.about">About Us</span></a></li>
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="contact.html"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span data-i18n="nav.contact">Contact Us</span></a></li>
+            </ul>
+            <div id="google_translate_element"></div>
+        </nav>
+        <img src="pictures/logo.jpg" alt="The Yarn Corner Logo" width="400" height="250">
+        <h1 data-i18n="about.title">About Us</h1>
+        <p data-i18n="about.intro">Here at The Yarn Corner, we are passionate about all things yarn. Our mission is to provide a welcoming space for crafters of all skill levels to explore, learn, and share their love for knitting and crochet. Whether you're a beginner looking to learn the basics or an experienced crafter seeking new challenges, we have something for everyone.</p>
+        <h2 data-i18n="about.story.heading">Our Story</h2>
+        <p data-i18n="about.story.body">The Yarn Corner was founded with the vision of creating a community where yarn enthusiasts could come together to share their passion, learn new techniques, and inspire each other. We hope that over the years we will grow into a vibrant hub for crafters of all ages and skill levels.</p>
+        <h2 data-i18n="about.mission.heading">Our Mission</h2>
+        <p data-i18n="about.mission.body">Our mission is to provide a welcoming space for crafters of all skill levels to explore, learn, and share their love for knitting and crochet. We aim to foster creativity, skill development, and a sense of community among yarn enthusiasts.</p>
+        <h2 data-i18n="about.form.heading">Questions for Us?</h2>
+        <section class="question-form-section bg-[#A5A58D] border border-black rounded-lg px-5 py-4 my-3">
+            <p data-i18n="about.form.intro">Have a question? Please fill out the form below and we will get back to you as soon as possible.</p>
+            <form class="question-form" action="#" method="post">
+                <label for="about-name" data-i18n="about.form.name.label">Name</label>
+                <input id="about-name" name="name" type="text" required>
+
+                <label for="about-email" data-i18n="about.form.email.label">Email</label>
+                <input id="about-email" name="email" type="email" required>
+
+                <label for="about-question" data-i18n="about.form.message.label">Your Question</label>
+                <textarea id="about-question" name="message" rows="5" required></textarea>
+
+                <button type="submit" data-i18n="about.form.submit">Submit</button>
+                <p id="about-form-thankyou" class="question-form-thankyou filter-hidden" data-i18n="about.form.thankyou" aria-live="polite">Thank you! We received your message.</p>
+            </form>
+        </section>
+        <footer class="mt-10">
+            <p>&copy; 2026 The Yarn Corner. All rights reserved.</p>
+            <p><span class="notranslate" data-i18n="footer.updated">Last updated:</span> <span data-intl-date="2026-04-12"></span></p>
+        </footer>
+        <script src="script.js"></script>
+        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </body>
+</html>

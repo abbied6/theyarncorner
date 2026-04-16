@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Yarn Corner - Patterns</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            tailwind.config = {
+                corePlugins: {
+                    preflight: false
+                }
+            };
+        </script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="bg-[#E5D7C4] p-5">
+        <nav class="bg-[#6B705C] p-4 mb-5 text-right rounded-md">
+            <div class="top-controls mb-2">
+                <div class="lang-switcher" aria-label="Language Switcher" data-i18n-aria-label="nav.languageSwitcher"> 
+                    <button class="px-3 py-1.5 rounded-md border border-[#6B705C] bg-[#E5D7C4] text-[#6B705C] font-bold" type="button" onclick="setLanguage('en')">English</button> 
+                    <button class="px-3 py-1.5 rounded-md border border-[#6B705C] bg-[#E5D7C4] text-[#6B705C] font-bold" type="button" onclick="setLanguage('es')">Español</button> 
+                    <button class="px-3 py-1.5 rounded-md border border-[#6B705C] bg-[#E5D7C4] text-[#6B705C] font-bold" type="button" onclick="setLanguage('fr')">Français</button> 
+                </div>
+            </div>
+            <ul class="flex flex-wrap justify-end gap-6">
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span data-i18n="nav.home">Home</span></a></li>
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="crochet.html"><i class="fa-solid fa-scissors" aria-hidden="true"></i><span data-i18n="nav.crochet">Crochet</span></a></li>
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="knit.html"><i class="fa-solid fa-shirt" aria-hidden="true"></i><span data-i18n="nav.knit">Knit</span></a></li>
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="patterns.html"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span data-i18n="nav.patterns">Patterns</span></a></li>
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="about.html"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span data-i18n="nav.about">About Us</span></a></li>
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="contact.html"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span data-i18n="nav.contact">Contact Us</span></a></li>
+            </ul>
+            <div id="google_translate_element"></div>
+        </nav>
+        <img src="pictures/logo.jpg" alt="The Yarn Corner Logo" width="400" height="250">
+        <h1 data-i18n="patterns.title">Patterns</h1>
+        <p data-i18n="patterns.intro">Discover a wide variety of knitting and crochet patterns designed for every skill level, from beginner to advanced. Patterns include a mix of free and paid options, giving you the flexibility to explore new techniques, create beautiful pieces, and grow your skills at your own pace.</p>
+        <div class="filter-controls flex flex-wrap gap-4 mt-9 mb-4 ml-3" role="group" aria-label="Pattern filters" data-i18n-aria-label="patterns.filter.ariaLabel">
+            <button type="button" class="filter-btn active bg-[#A5A58D] text-white border border-[#6B705C] px-6 py-3 rounded-lg font-bold text-[1.05rem] hover:bg-[#BB8588]" data-filter="all" aria-pressed="true" data-i18n="patterns.filter.all">All Patterns</button>
+            <button type="button" class="filter-btn bg-[#A5A58D] text-white border border-[#6B705C] px-6 py-3 rounded-lg font-bold text-[1.05rem] hover:bg-[#BB8588]" data-filter="crochet" aria-pressed="false" data-i18n="patterns.filter.crochet">Crochet Only</button>
+            <button type="button" class="filter-btn bg-[#A5A58D] text-white border border-[#6B705C] px-6 py-3 rounded-lg font-bold text-[1.05rem] hover:bg-[#BB8588]" data-filter="knit" aria-pressed="false" data-i18n="patterns.filter.knit">Knit Only</button>
+        </div>
+        <p id="filter-no-results" class="filter-no-results filter-hidden" aria-live="polite" data-i18n="patterns.filter.noresults">No patterns match this filter.</p>
+        <h2 data-i18n="patterns.beginner.heading">Beginner Patterns</h2>
+        <p data-i18n="patterns.beginner.body">When it comes to starting crochet and knit, it is important to learn the different stitches, understand how to control tension, and maintain consistency. These patterns are a great place for beginners to start learning these important skills.</p>
+        <h3 data-craft="crochet">Crochet</h3>
+        <div class="pattern-card bg-[#A5A58D] border border-black rounded-lg px-5 py-4 my-3" data-craft="crochet">
+            <ul class="pattern-list">
+                <!-- Dishcloths / Washcloths -->
+                <li>
+                    <p data-i18n="patterns.beginner.crochet.washcloth.desc">This <a href="https://www.youtube.com/watch?v=BTI4wm5wRGg" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.beginner.crochet.washcloth">Crochet Washcloth</span></a> pattern is a beginner-friendly project that helps you practice basic stitches while creating a simple, useful item for everyday use.</p>
+                </li>
+                <li>
+                    <p data-i18n="patterns.beginner.crochet.dishcloth.desc">This <a href="https://www.youtube.com/watch?v=cbxRliBUxJU" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.beginner.crochet.dishcloth">Farmhouse Dishcloth</span></a> tutorial teaches beginners how to make a stylish, textured dishcloth perfect for kitchen use.</p>
+                    <p><em>Free pattern: <a href="https://www.amandacrochets.com/farmhouse-dishcloth/" target="_blank" rel="noopener noreferrer">Farmhouse Dishcloth Free Pattern</a></em></p>
+                    <p><em>Pattern to buy: <a href="https://www.etsy.com/au/listing/1401756120/crochet-dishcloth-pattern-easy-beginner?ref=listings_manager_grid" target="_blank" rel="noopener noreferrer">Farmhouse Dishcloth PDF Pattern</a></em></p>
+                </li>
+                <!-- Scarves -->
+                <li>
+                    <p data-i18n="patterns.beginner.crochet.scarf1.desc">This <a href="https://www.youtube.com/watch?v=qdeZHJ0auU0" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.beginner.crochet.scarf1">Simple Single Color Scarf</span></a> tutorial walks beginners through creating a classic one-color scarf using basic crochet stitches.</p>
+                </li>
+                <li>
+                    <p data-i18n="patterns.beginner.crochet.scarf2.desc">This <a href="https://www.youtube.com/watch?v=rXQvufVGCoQ" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.beginner.crochet.scarf2">Beginner Scarf Pattern</span></a> offers another easy scarf design for new crocheters, helping build confidence while creating a wearable finished piece.</p>
+                    <p><em>Free pattern: <a href="https://bhookedcrochet.com/2018/10/07/how-to-crochet-a-scarf-for-the-complete-beginner/" target="_blank" rel="noopener noreferrer">How to Crochet a Scarf for Beginners</a></em></p>
+                    <p><em>Pattern to buy: <a href="https://bhooked.com/products/beginner-crochet-scarf-pdf" target="_blank" rel="noopener noreferrer">Beginner Crochet Scarf PDF Pattern</a></em></p>
+                </li>
+                <!-- Granny Squares -->
+                <li>
+                    <p data-i18n="patterns.beginner.crochet.grannysquare1.desc">This <a href="https://www.youtube.com/watch?v=euqnRKNJaXo" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.beginner.crochet.grannysquare1">Single Color Granny Square</span></a> tutorial teaches beginners how to create a classic granny square using one yarn color, making it a great project for learning stitch structure.</p>
+                </li>
+                <li>
+                    <p data-i18n="patterns.beginner.crochet.grannysquare2.desc">This <a href="https://www.youtube.com/watch?v=RwnArj7HdXo" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.beginner.crochet.grannysquare2">Multi Color Granny Square</span></a> tutorial shows how to build a traditional granny square while changing colors, helping beginners practice color transitions and pattern repetition.</p>
+                </li>
+                <!-- Simple Hats -->
+                <li>
+                    <p data-i18n="patterns.beginner.crochet.beanie1.desc">This <a href="https://www.youtube.com/watch?v=XhjtiuwEss8" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.beginner.crochet.beanie1">Basic Beanie Tutorial</span></a> is an easy step-by-step guide for crocheting a simple beanie, perfect as a first wearable project.</p>
+                    <p><em>Pattern to buy: <a href="https://www.etsy.com/au/listing/1702678839/easy-crochet-beanie-pattern?ref=shop_home_active_6&crt=1&dd=1&logging_key=d8b2eae25188b17a612f4381a8a9631c97dc5bdc%3A1702678839" target="_blank" rel="noopener noreferrer">Easy Crochet Beanie Pattern</a></em></p>
+                </li>
+                <li>
+                    <p data-i18n="patterns.beginner.crochet.beanie2.desc">This <a href="https://www.youtube.com/watch?v=Zo_mWdU4ibg" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.beginner.crochet.beanie2">Striped Beanie</span></a> tutorial teaches beginners how to make a beanie with color changes for a fun striped design.</p>
+                    <p><em>Free pattern: <a href="https://vivcrochets.com/crochet-striped-beanie-free-pattern-video-tutorial/" target="_blank" rel="noopener noreferrer">Striped Beanie Free Pattern</a></em></p>
+                    <p><em>Pattern to buy: <a href="https://www.etsy.com/listing/1811974576/crochet-striped-beanie-pattern-pdf?etsrc=sdt" target="_blank" rel="noopener noreferrer">Striped Beanie PDF Pattern</a></em></p>
+                </li>
+                <!-- Basic Blankets -->
+                <li>
+                    <p data-i18n="patterns.beginner.crochet.blanket1.desc">This <a href="https://www.youtube.com/watch?v=_ZkhD3c_sac" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.beginner.crochet.blanket1">Basic Striped Blanket</span></a> tutorial helps beginners create a cozy striped blanket while practicing stitch repetition and row consistency.</p>
+                    <p><em>Free pattern: <a href="https://bhookedcrochet.com/2021/11/05/beginner-crochet-blanket/" target="_blank" rel="noopener noreferrer">Beginner Crochet Blanket Free Pattern</a></em></p>
+                    <p><em>Pattern to buy: <a href="https://bhooked.com/products/beginner-crochet-blanket-pdf" target="_blank" rel="noopener noreferrer">Beginner Crochet Blanket PDF Pattern</a></em></p>
+                </li>
+            </ul>
+        </div>
+        <h3 data-craft="knit">Knit</h3>
+        <div class="pattern-card bg-[#A5A58D] border border-black rounded-lg px-5 py-4 my-3" data-craft="knit">
+            <ul class="pattern-list">
+                <!-- Scarves -->
+                <li>
+                    <p data-i18n="patterns.beginner.knit.scarf1.desc">This <a href="https://www.youtube.com/watch?v=24lR2IRS57A" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.beginner.knit.scarf1">Beginner Scarf</span></a> tutorial walks beginners through knitting a simple, cozy scarf while practicing foundational stitches.</p>
+                    <p><em>Free pattern: <a href="https://sheepandstitch.com/pattern/how-to-knit-a-scarf-for-total-beginners/" target="_blank" rel="noopener noreferrer">How to Knit a Scarf for Total Beginners</a></em></p>
+                </li>
+                <li>
+                    <p data-i18n="patterns.beginner.knit.scarf2.desc">This <a href="https://www.youtube.com/watch?v=j8CtgLw_ufY" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.beginner.knit.scarf2">Ribbed Scarf</span></a> tutorial shows beginners how to knit a stretchy ribbed scarf, perfect for practicing knit and purl combinations.</p>
+                    <p><em>Free pattern: <a href="https://www.snufflebean.co.uk/chunky-no-purl-ribbed-scarf/" target="_blank" rel="noopener noreferrer">Chunky No-Purl Ribbed Scarf</a></em></p>
+                </li>
+                <!-- Dishcloths -->
+                <li>
+                    <p data-i18n="patterns.beginner.knit.dishcloth.desc">This <a href="https://www.youtube.com/watch?v=-vB9UvBx9xc" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.beginner.knit.dishcloth">Basic One Color Dishcloth</span></a> tutorial is ideal for beginners to practice simple knit stitches while creating a functional dishcloth.</p>
+                    <p><em>Free pattern: <a href="https://jknitsandbits.wordpress.com/2017/07/19/p5-simple-dishcloth-knit/" target="_blank" rel="noopener noreferrer">P5 Simple Dishcloth Knit</a></em></p>
+                </li>
+                <!-- Pot holders -->
+                <li>
+                    <p data-i18n="patterns.beginner.knit.potholder1.desc">This <a href="https://www.youtube.com/watch?v=uyKXe7aYYQM" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.beginner.knit.potholder1">Candor Potholder Pattern</span></a> tutorial guides beginners through knitting a practical potholder in a simple, beginner-friendly style.</p>
+                    <p><em>Pattern to buy: <a href="https://www.etsy.com/au/listing/1742355085/knitting-pattern-easy-knit-potholder?etsrc=sdt" target="_blank" rel="noopener noreferrer">Easy Knit Potholder</a></em></p>
+                </li>
+                <li>
+                    <p data-i18n="patterns.beginner.knit.potholder2.desc">This <a href="https://www.youtube.com/watch?v=svMZGXXaK2g" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.beginner.knit.potholder2">Multi Color Potholder Pattern</span></a> tutorial teaches beginners how to combine yarn colors while knitting a functional potholder.</p>
+                    <p><em>Free pattern: <a href="https://thispixiecreates.com/how-to-crochet-a-single-crochet-potholder-pgcal2024/" target="_blank" rel="noopener noreferrer">Single Crochet Potholder Free Pattern</a></em></p>
+                    <p><em>Pattern to buy: <a href="https://www.ravelry.com/patterns/library/single-crochet-potholder-3" target="_blank" rel="noopener noreferrer">Single Crochet Potholder PDF</a></em></p>
+                </li>
+                <!-- Headbands -->
+                <li>
+                    <p data-i18n="patterns.beginner.knit.headband1.desc">This <a href="https://www.youtube.com/watch?v=MY0bbAHIkgY" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.beginner.knit.headband1">Autumn Headband Pattern</span></a> tutorial guides beginners through knitting a cozy seasonal headband with a simple, stylish design.</p>
+                </li>
+                <li>
+                    <p data-i18n="patterns.beginner.knit.headband2.desc">This <a href="https://www.youtube.com/watch?v=-EtQUXWhg6w" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.beginner.knit.headband2">Brigitte Headband Pattern</span></a> tutorial shows how to knit a stylish headband, perfect for practicing basic stitches and finishing techniques.</p>
+                    <p><em>Free downloadable PDF pattern: <a href="http://starcrossedknits.com/patterns/p/brigitte-headband" target="_blank" rel="noopener noreferrer">Brigitte Headband PDF</a></em></p>
+                </li>
+                <!-- Simple Hats -->
+                <li>
+                    <p data-i18n="patterns.beginner.knit.hat1.desc">This <a href="https://www.youtube.com/watch?v=ZGdMtTH0A3k" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.beginner.knit.hat1">Rib Knit Hat Pattern</span></a> tutorial teaches beginners to knit a warm ribbed hat, perfect for practicing knit and purl combinations.</p>
+                    <p><em>Free pattern: <a href="https://bhookedcrochet.com/2022/03/18/everyday-rib-knit-hat/" target="_blank" rel="noopener noreferrer">Everyday Rib Knit Hat</a></em></p>
+                    <p><em>Pattern to buy: <a href="https://bhooked.com/products/everyday-rib-knit-hat-pdf" target="_blank" rel="noopener noreferrer">Everyday Rib Knit Hat PDF</a></em></p>
+                </li>
+                <li>
+                    <p data-i18n="patterns.beginner.knit.hat2.desc">This <a href="https://www.youtube.com/watch?v=1l8J6VGJXEo" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.beginner.knit.hat2">Knit in the Round Hat Pattern</span></a> tutorial demonstrates how to knit a seamless hat in the round, perfect for beginners ready to try circular knitting.</p>
+                    <p><em>Pattern to buy: <a href="https://ysolda.com/products/leith-hat" target="_blank" rel="noopener noreferrer">Leith Hat PDF</a></em></p>
+                </li>
+                <!-- Basic Blankets -->
+                <li>
+                    <p data-i18n="patterns.beginner.knit.blanket1.desc">This <a href="https://www.youtube.com/watch?v=zmVJnpIt7dQ" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.beginner.knit.blanket1">Arctic Throw Blanket</span></a> tutorial guides beginners through knitting a cozy throw blanket while practicing stitch repetition and pattern consistency.</p>
+                    <p><em>Free downloadable pattern: <a href="https://sewhomey.com/arctic-throw-free-prep-guide/" target="_blank" rel="noopener noreferrer">Arctic Throw Free Prep Guide</a></em></p>
+                    <p><em>Pattern to buy: <a href="https://www.etsy.com/listing/967522285/knitting-pattern-blanket-throw-afghan" target="_blank" rel="noopener noreferrer">Arctic Throw Blanket PDF</a></em></p>
+                </li>
+            </ul>
+        </div>
+        <h2 data-i18n="patterns.intermediate.heading">Intermediate Patterns</h2>
+        <p data-i18n="patterns.intermediate.body">Once you have mastered the basics, you can start exploring more complex patterns that introduce new stitches, techniques, and design elements. These patterns will help you build on your foundational skills and challenge you to create more intricate and beautiful pieces.</p>
+        <h3 data-craft="crochet">Crochet</h3>
+        <div class="pattern-card bg-[#A5A58D] border border-black rounded-lg px-5 py-4 my-3" data-craft="crochet">
+            <ul class="pattern-list">
+                <!-- Amigurumi -->
+                <li>
+                    <p data-i18n="patterns.intermediate.crochet.amigurumi.desc">This <a href="https://www.youtube.com/playlist?list=PL0cE5yxWhDI8zOJoACfWv65gP0RNEx_ph" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.intermediate.crochet.amigurumi">Amigurumi Plushies Playlist</span></a> includes 67 different crochet tutorials that guide beginners through creating a variety of stuffed animals and plush projects.</p>
+                </li>
+                <!-- Sweaters -->
+                <li>
+                    <p data-i18n="patterns.intermediate.crochet.jumper1.desc">This <a href="https://www.youtube.com/watch?v=YmscjeWqhAY" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.intermediate.crochet.jumper1">Striped Moss Stitch Crochet Jumper</span></a> tutorial teaches crocheters how to create a cozy striped sweater while practicing moss stitch texture and garment construction.</p>
+                </li>
+                <li>
+                    <p data-i18n="patterns.intermediate.crochet.jumper2.desc">This <a href="https://www.youtube.com/watch?v=4fpbS5kWzxw" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.intermediate.crochet.jumper2">Fuzzy Striped Crochet Sweater Pattern</span></a> tutorial walks users through creating a soft, textured sweater with stylish stripes and a fuzzy finish.</p>
+                </li>
+                <!-- Bags / Totes -->
+                <li>
+                    <p data-i18n="patterns.intermediate.crochet.totebag.desc">This <a href="https://www.youtube.com/watch?v=jBKOZTYVpLA" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.intermediate.crochet.totebag">Basic Crochet Tote Bag</span></a> tutorial helps beginners create a simple and functional tote bag while practicing foundational stitches.</p>
+                    <p><em>Pattern to buy: <a href="https://www.etsy.com/au/listing/4402401256/crochet-basic-tote-bag-pattern-pdf?etsrc=sdt" target="_blank" rel="noopener noreferrer">Crochet Basic Tote Bag Pattern PDF</a></em></p>
+                </li>
+                <li>
+                    <p data-i18n="patterns.intermediate.crochet.grannysquarebag.desc">This <a href="https://www.youtube.com/watch?v=JV309uahywg" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.intermediate.crochet.grannysquarebag">Granny Square Bag Tutorial</span></a> shows how to combine classic granny squares into a stylish crochet bag project.</p>
+                </li>
+                <li>
+                    <p data-i18n="patterns.intermediate.crochet.meshbag.desc">This <a href="https://www.youtube.com/watch?v=EewQNjKeh2Y" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.intermediate.crochet.meshbag">Crochet Mesh Bag</span></a> tutorial guides users through creating a lightweight, reusable mesh bag perfect for everyday use.</p>
+                </li>
+                <!-- Patterned Blankets -->
+                <li>
+                    <p data-i18n="patterns.intermediate.crochet.grannysquareblanket.desc">This <a href="https://www.youtube.com/watch?v=9X0sLr6Wpfs" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.intermediate.crochet.grannysquareblanket">Giant Granny Square Blanket</span></a> tutorial helps crocheters create a bold blanket design using an oversized granny square pattern.</p>
+                    <p><em>Pattern to buy: <a href="https://meemamakes.com/products/granny-love-blanket-pattern?variant=f14a0578-1cdb-4e21-a1c6-0d9f468b6384&utm_content=YT3-krYhwh1ko-eVF_K1rW0sf0ZYP4OCo4j0qaWMsKCAM7CfJoX-1LAl-r2NI79a7Q49knspi0uJ5T495uJRwpdHBIKf&utm_term=UCbCVwZfDTUE5oQoj6OZf-qw&utm_medium=product_shelf&utm_source=youtube" target="_blank" rel="noopener noreferrer">Granny Love Blanket Pattern</a></em></p>
+                </li>
+                <li>
+                    <p data-i18n="patterns.intermediate.crochet.starblanket.desc">This <a href="https://www.youtube.com/watch?v=2vfmUCsCIrE" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.intermediate.crochet.starblanket">Star Blanket with a Pom Pom Border</span></a> tutorial teaches users how to create a decorative star-shaped blanket finished with a playful pom pom edge.</p>
+                    <p><em>Pattern to buy: <a href="https://www.etsy.com/listing/1861122651/crochet-granny-eight-point-star-blanket?etsrc=sdt" target="_blank" rel="noopener noreferrer">Crochet Granny Eight Point Star Blanket</a></em></p>
+                </li>
+                <li>
+                    <p data-i18n="patterns.intermediate.crochet.chevronblanket.desc">This <a href="https://www.youtube.com/watch?v=2DfZ0HL4i9I" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.intermediate.crochet.chevronblanket">Crochet Chevron Blanket</span></a> tutorial walks users through creating a classic chevron pattern blanket with bold zigzag rows.</p>
+                </li>
+                <!-- Hats -->
+                <li>
+                    <p data-i18n="patterns.intermediate.crochet.argylehat.desc">This <a href="https://www.youtube.com/watch?v=Xpez6dfohZc" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.intermediate.crochet.argylehat">Argyle Crochet Hat</span></a> tutorial introduces more advanced shaping techniques while creating a stylish patterned hat.</p>
+                    <p><em>Free pattern: <a href="https://bhookedcrochet.com/2018/11/11/argyle-crochet-hat/" target="_blank" rel="noopener noreferrer">Argyle Crochet Hat</a></em></p>
+                    <p><em>Pattern to buy: <a href="https://bhooked.com/products/argyle-crochet-hat-pdf" target="_blank" rel="noopener noreferrer">Argyle Crochet Hat PDF</a></em></p>
+                </li>
+            </ul>
+        </div>
+        <h3 data-craft="knit">Knit</h3>
+        <div class="pattern-card bg-[#A5A58D] border border-black rounded-lg px-5 py-4 my-3" data-craft="knit">
+            <ul class="pattern-list">
+                <!-- Sweaters -->
+                <li>
+                    <p data-i18n="patterns.intermediate.knit.sweater1.desc">This <a href="https://www.youtube.com/watch?v=GaAHOpJZ5zs&list=PL8bg2eVKMZIBJzUF9ZuKxLXaw2aMt2kKT" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.intermediate.knit.sweater1">Beginner Knit Sweater Pattern</span></a> tutorial guides beginners through creating a simple sweater, making it a great first clothing project for knitters ready to level up.</p>
+                </li>
+                <li>
+                    <p data-i18n="patterns.intermediate.knit.cardigan.desc">This <a href="https://www.youtube.com/watch?v=b4EI3Tx3h5w&list=PL8bg2eVKMZIBJzUF9ZuKxLXaw2aMt2kKT&index=7" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.intermediate.knit.cardigan">Easy Button Cardigan</span></a> tutorial walks knitters through making a cozy cardigan with buttons, perfect for learning basic garment construction.</p>
+                </li>
+                <!-- Socks -->
+                <li>
+                    <p data-i18n="patterns.intermediate.knit.socks1.desc">This <a href="https://www.youtube.com/watch?v=2aA0ZE52Sn4" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.intermediate.knit.socks1">Easy Sock Pattern</span></a> tutorial teaches beginners how to knit a simple pair of socks while practicing shaping and working in the round.</p>
+                    <p><em>Free downloadable pattern: <a href="https://www.voolenvineyarns.com/collections/patterns-1/products/favorite-socks-digital-download" target="_blank" rel="noopener noreferrer">Favorite Socks Digital Download</a></em></p>
+                </li>
+                <!-- Mittens or Gloves -->
+                <li>
+                    <p data-i18n="patterns.intermediate.knit.mittens.desc">This <a href="https://www.youtube.com/watch?v=IaMkqrNlz54" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.intermediate.knit.mittens">Easy Knit Mittens - 3 Different Sizes</span></a> tutorial shows beginners how to create warm mittens with size options for a customizable fit.</p>
+                </li>
+                <li>
+                    <p data-i18n="patterns.intermediate.knit.gloves.desc">This <a href="https://www.youtube.com/watch?v=jDmB0VFZq_g" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.intermediate.knit.gloves">Easy Knit Gloves</span></a> tutorial walks knitters through creating simple gloves while practicing shaping and finger construction.</p>
+                    <p><em>Free downloadable pattern: <a href="https://nimble-needles.com/patterns/how-to-knit-gloves/" target="_blank" rel="noopener noreferrer">How to Knit Gloves</a></em></p>
+                </li>
+                <!-- Cable Knit Scarves or Hats -->
+                <li>
+                    <p data-i18n="patterns.intermediate.knit.scarf1.desc">This <a href="https://www.youtube.com/watch?v=OzKeDLGsrDA" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.intermediate.knit.scarf1">Celtic Cable Scarf</span></a> tutorial introduces knitters to cable work while creating a beautiful textured scarf pattern.</p>
+                    <p><em>Pattern to buy: <a href="https://www.ravelry.com/patterns/library/celtic-cable-scarf" target="_blank" rel="noopener noreferrer">Celtic Cable Scarf Pattern</a></em></p>
+                </li>
+                <li>
+                    <p data-i18n="patterns.intermediate.knit.hat1.desc">This <a href="https://www.youtube.com/watch?v=t_hfN7U-fAg" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.intermediate.knit.hat1">Cable Knit Hat</span></a> tutorial teaches knitters how to create a classic cable hat with beautiful texture and shaping.</p>
+                    <p><em>Free pattern: <a href="https://bhookedcrochet.com/2021/03/05/classic-cable-knit-hat/" target="_blank" rel="noopener noreferrer">Classic Cable Knit Hat</a></em></p>
+                    <p><em>Pattern to buy: <a href="https://bhooked.com/products/classic-cable-knit-hat-pdf" target="_blank" rel="noopener noreferrer">Classic Cable Knit Hat PDF</a></em></p>
+                </li>
+                <!-- Colorwork -->
+                <li>
+                    <p data-i18n="patterns.intermediate.knit.socks2.desc">This <a href="https://www.youtube.com/watch?v=9BXoFgm5N2E" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.intermediate.knit.socks2">Knit Colorwork Socks - Fair Isle Sock</span></a> tutorial helps knitters practice colorwork techniques while creating patterned socks with a Fair Isle design.</p>
+                    <p><em>Pattern to buy: <a href="https://www.etsy.com/listing/885598412/easy-basic-worsted-weight-sock-knitting?ref=listing_published_alert" target="_blank" rel="noopener noreferrer">Easy Basic Worsted Weight Sock Knitting Pattern</a></em></p>
+                </li>
+            </ul>
+        </div>
+        <h2 data-i18n="patterns.advanced.heading">Advanced Patterns</h2>
+        <p data-i18n="patterns.advanced.body">For those who have honed their skills and are looking for a challenge, advanced patterns offer intricate designs, complex stitch combinations, and unique construction techniques. These patterns are perfect for experienced crafters who want to push their creativity and craftsmanship to the next level.</p>
+        <h3 data-craft="crochet">Crochet</h3>
+        <div class="pattern-card bg-[#A5A58D] border border-black rounded-lg px-5 py-4 my-3" data-craft="crochet">
+            <ul class="pattern-list">
+                <!-- Detailed Garments -->
+                <li>
+                    <p data-i18n="patterns.advanced.crochet.dress1.desc">This <a href="https://www.youtube.com/watch?v=aiULJZIZ2Zw" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.advanced.crochet.dress1">Ivy Dress Crochet Tutorial</span></a> guides advanced crocheters through creating a fitted dress with detailed shaping and garment construction techniques.</p>
+                    <p><em>Pattern to buy: <a href="https://ko-fi.com/s/4a743b3451" target="_blank" rel="noopener noreferrer">Ivy Dress Pattern</a></em></p>
+                </li>
+                <li>
+                    <p data-i18n="patterns.advanced.crochet.dress2.desc">This <a href="https://www.youtube.com/watch?v=Ww1zPvgl9_0" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.advanced.crochet.dress2">Summery Babydoll Dress Tutorial</span></a> teaches crocheters how to create a lightweight fitted dress with more advanced shaping and styling details.</p>
+                </li>
+                <li>
+                    <p data-i18n="patterns.advanced.crochet.top.desc">This <a href="https://www.youtube.com/watch?v=L5KB232ndAc" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.advanced.crochet.top">Leaf Drop Top Crochet Tutorial</span></a> walks users through creating a stylish fitted top with intricate stitch work and detailed garment shaping.</p>
+                    <p><em>Pattern to buy: <a href="https://www.baecrochett.com/baecrochett/pdf-crochet-patterns/p/leaf-drop-top-crochet-pattern" target="_blank" rel="noopener noreferrer">Leaf Drop Top Crochet Pattern</a></em></p>
+                </li>
+                <li>
+                    <p data-i18n="patterns.advanced.crochet.bottoms.desc">This <a href="https://www.youtube.com/watch?v=zF7MM-2uV7U" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.advanced.crochet.bottoms">Crochet Pants & Shorts Tutorial</span></a> introduces advanced garment construction techniques while guiding users through fitted bottoms projects.</p>
+                </li>
+                <!-- Intricate Lacework -->
+                <li>
+                    <p data-i18n="patterns.advanced.crochet.lacymotif.desc">This <a href="https://www.youtube.com/watch?v=paCUN8aVi64" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.advanced.crochet.lacymotif">Lacy Motif Crochet Tutorial</span></a> teaches advanced crocheters how to create delicate lace motifs with detailed stitch combinations and intricate pattern work.</p>
+                    <p><em>Pattern to buy: <a href="https://www.etsy.com/au/listing/1564654077/crochet-symbol-chart-motif-4-small-lacy?etsrc=sdt" target="_blank" rel="noopener noreferrer">Small Lacy Motif Pattern</a></em></p>
+                </li>
+                <li>
+                    <p data-i18n="patterns.advanced.crochet.bookmark.desc">This <a href="https://www.youtube.com/watch?v=XE8ggm9nU0c" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.advanced.crochet.bookmark">Crochet Floral Lace Bookmark</span></a> tutorial helps users practice delicate lace techniques while creating an elegant decorative bookmark.</p>
+                    <p><em>Free written pattern: <a href="https://crochetbits.com/floral-lace-bookmark-crochet-pattern/" target="_blank" rel="noopener noreferrer">Floral Lace Bookmark Pattern</a></em></p>
+                </li>
+                <!-- Overlay Crochet / Mandala Blankets -->
+                <li>
+                    <p data-i18n="patterns.advanced.crochet.mosaicblanket.desc">This <a href="https://www.youtube.com/playlist?list=PLMXZ8EJs8rEZDx0C4isXi6hapm0jV4kG1" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.advanced.crochet.mosaicblanket">Overlay Mosaic Crochet Blanket Playlist</span></a> contains 9 advanced tutorials that guide users through intricate overlay and mandala-style blanket designs.</p>
+                </li>
+            </ul>
+        </div>
+        <h3 data-craft="knit">Knit</h3>
+        <div class="pattern-card bg-[#A5A58D] border border-black rounded-lg px-5 py-4 my-3" data-craft="knit">
+            <ul class="pattern-list">
+                <!-- Intricate Sweaters -->
+                <li>
+                    <p data-i18n="patterns.advanced.knit.arcticsweater.desc">This <a href="https://www.youtube.com/watch?v=78L93aXx6pk" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.advanced.knit.arcticsweater">Arctic Light Sweater Part 1</span></a>, <a href="https://www.youtube.com/watch?v=92FbMA-41c8" target="_blank" rel="noopener noreferrer">Part 2</a>, and <a href="https://www.youtube.com/watch?v=1Z6usc99Rdk" target="_blank" rel="noopener noreferrer">Part 3</a> tutorial series guides advanced knitters through creating a fitted sweater using multiple shaping and construction techniques.</p>
+                    <p><em>Pattern to buy: <a href="https://www.kutovakika.com/shop-all-patterns/p/arctic-light-sweater" target="_blank" rel="noopener noreferrer">Arctic Light Sweater Pattern</a></em></p>
+                </li>
+                <li>
+                    <p data-i18n="patterns.advanced.knit.icelandicsweater.desc">This <a href="https://www.youtube.com/watch?v=0ss8VxLNqlY" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.advanced.knit.icelandicsweater">Knitted Icelandic Sweater Part 1</span></a>, <a href="https://www.youtube.com/watch?v=tRUCf3mzTGg" target="_blank" rel="noopener noreferrer">Part 2</a>, and <a href="https://www.youtube.com/watch?v=BGNLk1sSdEk" target="_blank" rel="noopener noreferrer">Part 3</a> tutorial series teaches advanced knitters how to create a detailed Icelandic-style sweater with intricate shaping and colorwork.</p>
+                    <p><em>Free downloadable pattern: <a href="https://www.ravelry.com/patterns/library/autumn-31" target="_blank" rel="noopener noreferrer">Autumn Sweater Pattern</a></em></p>
+                </li>
+                <!-- Lace Shawls -->
+                <li>
+                    <p data-i18n="patterns.advanced.knit.laceshawl.desc">This <a href="https://www.youtube.com/watch?v=aRdevtwGRdc" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.advanced.knit.laceshawl">Victorian Shetland Lace Shawl Knit</span></a> tutorial introduces advanced knitters to delicate lacework techniques while creating an elegant shawl design.</p>
+                </li>
+                <!-- Advanced Socks -->
+                <li>
+                    <p data-i18n="patterns.advanced.knit.socks1.desc">This <a href="https://www.youtube.com/watch?v=ZRe39iX2G4Q" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.advanced.knit.socks1">Knit Lyon Memories Socks Tutorial</span></a> walks advanced knitters through detailed sock construction, including shaping and heel variations.</p>
+                    <p><em>Pattern to buy: <a href="https://zaneteknits.com/pattern/lyon-memories-socks/" target="_blank" rel="noopener noreferrer">Lyon Memories Socks Pattern</a></em></p>
+                </li>
+                <!-- Detailed Cable Patterns -->
+                <li>
+                    <p data-i18n="patterns.advanced.knit.cablepatterns.desc">This <a href="https://www.youtube.com/playlist?list=PLuYKIe0IecIaoTGdQUH8LqSsWpK21-fuH" target="_blank" rel="noopener noreferrer"><span data-i18n="patterns.advanced.knit.cablepatterns">Detailed Cable Patterns Playlist</span></a> includes 15 videos that guide knitters through advanced cable stitch techniques and intricate textured designs.</p>
+                </li>
+            </ul>
+        </div>
+        <footer class="mt-10">
+            <p>&copy; 2026 The Yarn Corner. All rights reserved.</p>
+            <p><span class="notranslate" data-i18n="footer.updated">Last updated:</span> <span data-intl-date="2026-04-12"></span></p>
+        </footer>
+        <script src="script.js"></script>
+        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </body>
+</html>

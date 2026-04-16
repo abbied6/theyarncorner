@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Yarn Corner - Contact Us</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            tailwind.config = {
+                corePlugins: {
+                    preflight: false
+                }
+            };
+        </script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="bg-[#E5D7C4] p-5">
+        <nav class="bg-[#6B705C] p-4 mb-5 text-right rounded-md">
+            <div class="top-controls mb-2">
+                <div class="lang-switcher" aria-label="Language Switcher" data-i18n-aria-label="nav.languageSwitcher"> 
+                    <button class="px-3 py-1.5 rounded-md border border-[#6B705C] bg-[#E5D7C4] text-[#6B705C] font-bold" type="button" onclick="setLanguage('en')">English</button> 
+                    <button class="px-3 py-1.5 rounded-md border border-[#6B705C] bg-[#E5D7C4] text-[#6B705C] font-bold" type="button" onclick="setLanguage('es')">Español</button> 
+                    <button class="px-3 py-1.5 rounded-md border border-[#6B705C] bg-[#E5D7C4] text-[#6B705C] font-bold" type="button" onclick="setLanguage('fr')">Français</button> 
+                </div>
+            </div>
+            <ul class="flex flex-wrap justify-end gap-6">
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span data-i18n="nav.home">Home</span></a></li>
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="crochet.html"><i class="fa-solid fa-scissors" aria-hidden="true"></i><span data-i18n="nav.crochet">Crochet</span></a></li>
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="knit.html"><i class="fa-solid fa-shirt" aria-hidden="true"></i><span data-i18n="nav.knit">Knit</span></a></li>
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="patterns.html"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span data-i18n="nav.patterns">Patterns</span></a></li>
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="about.html"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span data-i18n="nav.about">About Us</span></a></li>
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="contact.html"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span data-i18n="nav.contact">Contact Us</span></a></li>
+            </ul>
+            <div id="google_translate_element"></div>
+        </nav>
+        <img src="pictures/logo.jpg" alt="The Yarn Corner Logo" width="400" height="250">
+        <h1 data-i18n="contact.title">Contact Us</h1>
+        <h2 data-i18n="contact.faq.heading">FAQ Section</h2>
+        <p data-i18n="contact.faq.body">Have questions about our website, patterns, or anything else? Check out our FAQ section for answers to common questions.</p>
+        <section class="contact-faq" aria-label="FAQ">
+            <div class="faq-item">
+                <button type="button" class="faq-toggle" data-faq-toggle="faq-answer-1" aria-expanded="false" aria-controls="faq-answer-1" data-i18n="contact.faq.q1">Do I need experience to start crocheting or knitting?</button>
+                <div id="faq-answer-1" class="faq-answer filter-hidden" data-faq-panel>
+                    <p data-i18n="contact.faq.a1">No experience is needed. Our beginner tutorials and pattern recommendations are designed to help you start from scratch.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button type="button" class="faq-toggle" data-faq-toggle="faq-answer-2" aria-expanded="false" aria-controls="faq-answer-2" data-i18n="contact.faq.q2">Are your patterns free?</button>
+                <div id="faq-answer-2" class="faq-answer filter-hidden" data-faq-panel>
+                    <p data-i18n="contact.faq.a2">We share both free and paid options. Each listing clearly labels whether it is a free resource or a pattern to purchase.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button type="button" class="faq-toggle" data-faq-toggle="faq-answer-3" aria-expanded="false" aria-controls="faq-answer-3" data-i18n="contact.faq.q3">How can I choose the right yarn and hook/needle size?</button>
+                <div id="faq-answer-3" class="faq-answer filter-hidden" data-faq-panel>
+                    <p data-i18n="contact.faq.a3">Start with medium-weight yarn and the suggested hook or needle size on the yarn label. This is usually the easiest setup for beginners.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button type="button" class="faq-toggle" data-faq-toggle="faq-answer-4" aria-expanded="false" aria-controls="faq-answer-4" data-i18n="contact.faq.q4">How long does support take to respond?</button>
+                <div id="faq-answer-4" class="faq-answer filter-hidden" data-faq-panel>
+                    <p data-i18n="contact.faq.a4">We aim to respond within 24 to 48 hours. During busy periods, replies may take slightly longer.</p>
+                </div>
+            </div>
+        </section>
+        <h2 data-i18n="contact.support.heading">Customer Support</h2>
+        <p data-i18n="contact.support.body">If you need further assistance, our customer support team is here to help. Reach out to us via email or phone, and we'll be happy to assist you with any inquiries or issues you may have.</p>
+        <p data-i18n="contact.email">Email: support@theyarncorner.com</p>
+        <p data-i18n="contact.phone">Phone: (123) 456-7890</p>
+        <h2 data-i18n="contact.social.heading">Social Media</h2>
+        <p data-i18n="contact.social.body">Follow us on social media to stay updated on the latest patterns, tips, and community events.</p>
+        <p data-i18n="contact.handle">Our handle on all platforms is @TheYarnCorner</p>
+        <div class="social-links" aria-label="Social media links">
+            <span class="social-link" aria-label="Instagram" data-i18n-aria-label="contact.social.instagram.aria" title="Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </span>
+            <span class="social-link" aria-label="TikTok" data-i18n-aria-label="contact.social.tiktok.aria" title="TikTok">
+                <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+            </span>
+            <span class="social-link" aria-label="Facebook" data-i18n-aria-label="contact.social.facebook.aria" title="Facebook">
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+            </span>
+        </div>
+        <footer class="mt-10">
+            <p>&copy; 2026 The Yarn Corner. All rights reserved.</p>
+            <p><span class="notranslate" data-i18n="footer.updated">Last updated:</span> <span data-intl-date="2026-04-12"></span></p>
+        </footer>
+        <script src="script.js"></script>
+        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </body>
+</html>

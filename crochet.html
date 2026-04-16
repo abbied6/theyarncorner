@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Yarn Corner - Crochet</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            tailwind.config = {
+                corePlugins: {
+                    preflight: false
+                }
+            };
+        </script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="bg-[#E5D7C4] p-5">
+        <nav class="bg-[#6B705C] p-4 mb-5 text-right rounded-md">
+            <div class="top-controls mb-2">
+                <div class="lang-switcher" aria-label="Language Switcher" data-i18n-aria-label="nav.languageSwitcher"> 
+                    <button class="px-3 py-1.5 rounded-md border border-[#6B705C] bg-[#E5D7C4] text-[#6B705C] font-bold" type="button" onclick="setLanguage('en')">English</button> 
+                    <button class="px-3 py-1.5 rounded-md border border-[#6B705C] bg-[#E5D7C4] text-[#6B705C] font-bold" type="button" onclick="setLanguage('es')">Español</button> 
+                    <button class="px-3 py-1.5 rounded-md border border-[#6B705C] bg-[#E5D7C4] text-[#6B705C] font-bold" type="button" onclick="setLanguage('fr')">Français</button> 
+                </div>
+            </div>
+            <ul class="flex flex-wrap justify-end gap-6">
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span data-i18n="nav.home">Home</span></a></li>
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="crochet.html"><i class="fa-solid fa-scissors" aria-hidden="true"></i><span data-i18n="nav.crochet">Crochet</span></a></li>
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="knit.html"><i class="fa-solid fa-shirt" aria-hidden="true"></i><span data-i18n="nav.knit">Knit</span></a></li>
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="patterns.html"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span data-i18n="nav.patterns">Patterns</span></a></li>
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="about.html"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span data-i18n="nav.about">About Us</span></a></li>
+                <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="contact.html"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span data-i18n="nav.contact">Contact Us</span></a></li>
+            </ul>
+            <div id="google_translate_element"></div>
+        </nav>
+        <img src="pictures/logo.jpg" alt="The Yarn Corner Logo" width="400" height="250">
+        <h1 data-i18n="crochet.title">Crochet</h1>
+        <p data-i18n="crochet.intro">Welcome to the Crochet section of The Yarn Corner! Crocheting involves using a hook to pull loops of yarn through each other, which creates "stitches". Some of the basic stitches that are invovled in crochet are the chain stitch (which is also known as the foundation stitch), the single crochet, and the double crochet. Beginners must learn how to hold the hook and yarn comfortably, create a starting chain, and build rows or rounds from there. Working one loop at a time makes it very easy to fix any mistakes, which makes crochet a very beginner-friendly entry point into the world of yarn crafts!</p>
+        <h2 data-i18n="crochet.supplies.heading">Supplies Needed</h2>
+        <p data-i18n="crochet.supplies.body">Crocheting only requires a few basic supplies to get started: basic yarn and a crochet hook!</p>
+        <ul class="list-disc pl-6">
+            <li data-i18n="crochet.supplies.item1">Yarn</li>
+            <li data-i18n="crochet.supplies.item2">Crochet hook</li>
+            <li data-i18n="crochet.supplies.item3">Scissors - for cutting yarn</li>
+            <li data-i18n="crochet.supplies.item4">Yarn needle - to weave in ends</li>
+        </ul>
+        <figure>
+            <img src="pictures/yarn-weight-chart.jpg" alt="Yarn weight categories from lace to bulky." width="330" height="480">
+            <figcaption data-i18n="crochet.figure.caption">While medium weight yarn is the most commonly used...there is a wide variety of weights available for different projects!</figcaption>
+        </figure>
+        <h2 data-i18n="crochet.basic.heading">Basic Stitches</h2>
+        <p data-i18n="crochet.basic.intro1">With crocheting there are a few important stitches that are essential for any crafter to master. Before we get into those stitches, it's important to first understand how to make a slip knot.</p>
+        <p data-i18n="crochet.basic.intro2">A slip knot is the most common way to start a crochet project. It's a simple loop that can be adjusted and tightened as needed.</p>
+        <h3 data-i18n="crochet.chain.heading">Chain Stitch</h3>
+        <p data-i18n="crochet.chain.body">The chain stitch (ch) is the most basic stitch in crochet and is used to start most projects by creating a foundation row.</p>
+        <h3 data-i18n="crochet.slip.heading">Slip Stitch</h3>
+        <p data-i18n="crochet.slip.body">The slip stitch (sl st) is a simple stitch used to join rounds or move yarn across stitches without adding any height.</p>
+        <h3 data-i18n="crochet.single.heading">Single Crochet</h3>
+        <p data-i18n="crochet.single.body">The single crochet (sc) is a fundamental tight stitch that creates a dense result and is great for beginners and sturdy projects.</p>
+        <h3 data-i18n="crochet.hdc.heading">Half Double Crochet</h3>
+        <p data-i18n="crochet.hdc.body">The half double crochet (hdc) is a versatile stitch that creates a slightly taller stitch than the single crochet.</p>
+        <h3 data-i18n="crochet.double.heading">Double Crochet</h3>
+        <p data-i18n="crochet.double.body">The double crochet (dc) is a taller stitch that builds up quickly and creates a more airy and open result.</p>
+        <h3 data-i18n="crochet.treble.heading">Treble Crochet</h3>
+        <p data-i18n="crochet.treble.body">The treble crochet (tr) is the tallest basic stitch and creates long loops and a loose and lacy texture.</p>
+        <h2 data-i18n="crochet.tutorials.heading">Tutorials/Basic Patterns</h2>
+        <p data-i18n="crochet.tutorials.body">For visual learners, we have compiled a list of YouTube tutorials that go over some of the basics of crochet.</p>
+        <figure>
+            <a href="https://www.youtube.com/watch?v=0gHmLDR2QLY&list=PLgLZIwwa8hcFxyjgGGLNPHxaAKTpg5g9B" target="_blank">
+                <img class="video-thumb" src="https://img.youtube.com/vi/0gHmLDR2QLY/hqdefault.jpg" alt="Crochet basic stitches tutorial video thumbnail" width="330" height="250">
+            </a>
+            <figcaption data-i18n="crochet.tutorials.caption">This video covers the basic stitches discussed above, starting with the slip knot and ending with the treble crochet.</figcaption>
+        </figure>
+        <footer class="mt-10">
+            <p>&copy; 2026 The Yarn Corner. All rights reserved.</p>
+            <p><span class="notranslate" data-i18n="footer.updated">Last updated:</span> <span data-intl-date="2026-04-12"></span></p>
+        </footer>
+        <script src="script.js"></script>
+        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </body>
+</html>
