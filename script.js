@@ -688,19 +688,18 @@ function formatIntl(lang) {
     });
 }
 
-    const timer = setInterval(function () {
-        const select = document.querySelector(".goog-te-combo");
-        if (select) {
-            select.value = lang;
-            select.dispatchEvent(new Event("change"));
-            clearInterval(timer);
-        }
-    }, 200);
+const timer = setInterval(function () {
+    const select = document.querySelector(".goog-te-combo");
+    if (select) {
+        select.value = lang;
+        select.dispatchEvent(new Event("change"));
+        clearInterval(timer);
+    }
+}, 200);
 
     setTimeout(function () {
         clearInterval(timer);
     }, 4000);
-}
 
 function setLanguage(lang) {
     applyTranslations(lang);
