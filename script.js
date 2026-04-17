@@ -688,9 +688,6 @@ function formatIntl(lang) {
     });
 }
 
-function applyGoogleTranslate(lang) {
-    if (!window.google || !google.translate) return;
-
     const timer = setInterval(function () {
         const select = document.querySelector(".goog-te-combo");
         if (select) {
@@ -709,8 +706,6 @@ function setLanguage(lang) {
     applyTranslations(lang);
     formatIntl(lang);
     localStorage.setItem("lang", lang);
-    applyGoogleTranslate(lang);
-    // Re-apply custom i18n after Google Translate updates the DOM.
     setTimeout(function () {
         applyTranslations(lang);
         formatIntl(lang);

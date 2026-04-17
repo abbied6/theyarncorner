@@ -19,6 +19,27 @@ img {
     max-width: 100%;
     height: auto;
 }
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+}
+.logo.responsive-img {
+    max-width: 180px;
+    height: auto;
+}
+.home .logo.responsive-img {
+    max-width: 260px;
+}
+.video-thumb {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.video-thumb:hover {
+  transform: scale(1.02);
+}
 
 /* index.html */
 .intro {

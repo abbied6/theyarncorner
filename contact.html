@@ -4,13 +4,6 @@
         <title>The Yarn Corner - Contact Us</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script>
-            tailwind.config = {
-                corePlugins: {
-                    preflight: false
-                }
-            };
-        </script>
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
         <link rel="stylesheet" href="styles.css">
@@ -32,9 +25,8 @@
                 <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="about.html"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span data-i18n="nav.about">About Us</span></a></li>
                 <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="contact.html"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span data-i18n="nav.contact">Contact Us</span></a></li>
             </ul>
-            <div id="google_translate_element"></div>
         </nav>
-        <img src="pictures/logo.jpg" alt="The Yarn Corner Logo" width="400" height="250">
+        <img src="pictures/logo.jpg" alt="The Yarn Corner Logo" width="400" height="250" class="logo responsive-img">
         <h1 data-i18n="contact.title">Contact Us</h1>
         <h2 data-i18n="contact.faq.heading">FAQ Section</h2>
         <p data-i18n="contact.faq.body">Have questions about our website, patterns, or anything else? Check out our FAQ section for answers to common questions.</p>
@@ -87,6 +79,5 @@
             <p><span class="notranslate" data-i18n="footer.updated">Last updated:</span> <span data-intl-date="2026-04-12"></span></p>
         </footer>
         <script src="script.js"></script>
-        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </body>
 </html>

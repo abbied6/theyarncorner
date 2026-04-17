@@ -4,13 +4,6 @@
         <title>The Yarn Corner - Knit</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script>
-            tailwind.config = {
-                corePlugins: {
-                    preflight: false
-                }
-            };
-        </script>
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
         <link rel="stylesheet" href="styles.css">
@@ -32,9 +25,8 @@
                 <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="about.html"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span data-i18n="nav.about">About Us</span></a></li>
                 <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="contact.html"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span data-i18n="nav.contact">Contact Us</span></a></li>
             </ul>
-            <div id="google_translate_element"></div>
         </nav>
-        <img src="pictures/logo.jpg" alt="The Yarn Corner Logo" width="400" height="250">
+        <img src="pictures/logo.jpg" alt="The Yarn Corner Logo" width="400" height="250" class="logo responsive-img">
         <h1 data-i18n="knit.title">Knit</h1>
         <p data-i18n="knit.intro">Welcome to the Knit section of The Yarn Corner! Knitting uses two needles to form a series of interconnected loops called stitches. The two foundational stitches in knitting are the knit stitch and the purl stitch, and nearly every knitting pattern is built from a combination of these stitches. Beginners start by learning how to cast on (getting stitches onto the needles), practice basic stitch patterns, and then bind off to finish a piece. While it can be a bit tricky to get the hang of, knitting becomes very rhythmic and relaxing with practice.</p>
         <h2 data-i18n="knit.supplies.heading">Supplies Needed</h2>
@@ -46,7 +38,7 @@
             <li data-i18n="knit.supplies.item4">Yarn needle - to weave in ends</li>
         </ul>
         <figure>
-            <img src="pictures/yarn-weight-chart-knit.jpg" alt="Yarn weight categories from lace to bulky." width="400" height="480">
+            <img src="pictures/yarn-weight-chart-knit.jpg" alt="Yarn weight categories from lace to bulky." width="400" height="480" class="responsive-img">
             <figcaption data-i18n="knit.figure.caption">Medium weight yarn is the most commonly used yarn weight for knitting, but there is a variety of weights that work best for different projects.</figcaption>
         </figure>
         <h2 data-i18n="knit.basic.heading">Basic Stitches</h2>
@@ -62,13 +54,13 @@
         <p data-i18n="knit.tutorials.body">For visual learners, we have compiled a list of YouTube tutorials that go over some of the basics of knitting.</p>
         <figure>
             <a href="https://www.youtube.com/watch?v=z6dDwbSp6SQ" target="_blank">
-                <img class="video-thumb" src="https://img.youtube.com/vi/z6dDwbSp6SQ/hqdefault.jpg" alt="Beginner knitting tutorial video thumbnail" width="350" height="225">
+                <img class="video-thumb responsive-img" src="https://img.youtube.com/vi/z6dDwbSp6SQ/hqdefault.jpg" alt="Beginner knitting tutorial video thumbnail" width="350" height="225">
             </a>
             <figcaption data-i18n="knit.tutorials.caption1">This video covers the very basics of knitting and covers how to cast on, knit, and cast off.</figcaption>
         </figure>
         <figure>
             <a href="https://www.youtube.com/watch?v=uaTC_GVDi_A" target="_blank">
-                <img class="video-thumb" src="https://img.youtube.com/vi/uaTC_GVDi_A/hqdefault.jpg" alt="Purl stitch tutorial video thumbnail" width="350" height="225">
+                <img class="video-thumb responsive-img" src="https://img.youtube.com/vi/uaTC_GVDi_A/hqdefault.jpg" alt="Purl stitch tutorial video thumbnail" width="350" height="225">
             </a>
             <figcaption data-i18n="knit.tutorials.caption2">This video covers the purl stitch.</figcaption>
         </figure>
@@ -77,6 +69,5 @@
             <p><span class="notranslate" data-i18n="footer.updated">Last updated:</span> <span data-intl-date="2026-04-12"></span></p>
         </footer>
         <script src="script.js"></script>
-        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </body>
 </html>

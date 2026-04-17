@@ -4,18 +4,11 @@
         <title>The Yarn Corner - Home</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script>
-            tailwind.config = {
-                corePlugins: {
-                    preflight: false
-                }
-            };
-        </script>
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
         <link rel="stylesheet" href="styles.css">
     </head>
-    <body class="bg-[#E5D7C4] p-5">
+    <body class="home bg-[#E5D7C4] p-5">
         <nav class="bg-[#6B705C] p-4 mb-5 text-right rounded-md">
             <div class="top-controls mb-2">
                 <div class="lang-switcher" aria-label="Language Switcher" data-i18n-aria-label="nav.languageSwitcher"> 
@@ -32,20 +25,19 @@
                 <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="about.html"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span data-i18n="nav.about">About Us</span></a></li>
                 <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="contact.html"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span data-i18n="nav.contact">Contact Us</span></a></li>
             </ul>
-            <div id="google_translate_element"></div>
         </nav>
         <div class="intro">
-            <img src="pictures/logo.jpg" alt="The Yarn Corner Logo" width="600" height="375">
+            <img src="pictures/logo.jpg" alt="The Yarn Corner Logo" width="600" height="375" class="logo responsive-img">
             <p data-i18n="home.intro">At The Yarn Corner, we make learning how to crochet and knit simple and accessible for beginners. Explore essential supplies with easy purchasing guides, browse a collection of free and premium patterns, and follow linked YouTube tutorials for step-by-step visual instruction. Everything you need is right here in one convenient spot to kickstart your crafting adventure!</p>
         </div>
         <section>
             <h2 data-i18n="home.crochet.heading">What is Crochet?</h2>
-            <img src="pictures/yarn-2.jpg" alt="A crochet hook and yarn in action" width="300" height="225">
+            <img src="pictures/yarn-2.jpg" alt="A crochet hook and yarn in action" width="300" height="225" class="responsive-img">
             <p><span data-i18n="home.crochet.body">Crochet involves yarn and a hooked needle...that truly is all you need to get started! With these two items, the possibilities for what you can make are unlimited. From coasters, to bags, to blankets, crochet has a wide variety of techniques and stitches which allow crocheters to make anything they could possibly desire.</span> <a href="crochet.html" data-i18n="home.readmore">Click here for more!</a></p>
         </section>
         <section>
             <h2 data-i18n="home.knit.heading">What is Knitting?</h2>
-            <img src="pictures/yarn-3.jpg" alt="Knitting needles and yarn in action" width="300" height="225">
+            <img src="pictures/yarn-3.jpg" alt="Knitting needles and yarn in action" width="300" height="225" class="responsive-img">
             <p><span data-i18n="home.knit.body">Knitting requires two needles and yarn to get started. Similar to crochet, with these two things, the possibilities of what you can knit are unlimited. From sweaters, to beanies, to pot holders, knitting has a wide variety of techniques and patterns which allow knitters to make whatever their heart desires.</span> <a href="knit.html" data-i18n="home.readmore">Click here for more!</a></p>
         </section>
         <footer class="mt-10">
@@ -53,6 +45,5 @@
             <p><span class="notranslate" data-i18n="footer.updated">Last updated:</span> <span data-intl-date="2026-04-12"></span></p>
         </footer>
         <script src="script.js"></script>
-        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </body>
 </html>

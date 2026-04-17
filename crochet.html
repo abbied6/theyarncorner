@@ -4,13 +4,6 @@
         <title>The Yarn Corner - Crochet</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script>
-            tailwind.config = {
-                corePlugins: {
-                    preflight: false
-                }
-            };
-        </script>
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
         <link rel="stylesheet" href="styles.css">
@@ -32,9 +25,8 @@
                 <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="about.html"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span data-i18n="nav.about">About Us</span></a></li>
                 <li><a class="text-[#E5D7C4] no-underline font-bold text-[1.0625rem] hover:text-[#BB8588]" href="contact.html"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span data-i18n="nav.contact">Contact Us</span></a></li>
             </ul>
-            <div id="google_translate_element"></div>
         </nav>
-        <img src="pictures/logo.jpg" alt="The Yarn Corner Logo" width="400" height="250">
+        <img src="pictures/logo.jpg" alt="The Yarn Corner Logo" width="400" height="250" class="logo responsive-img">
         <h1 data-i18n="crochet.title">Crochet</h1>
         <p data-i18n="crochet.intro">Welcome to the Crochet section of The Yarn Corner! Crocheting involves using a hook to pull loops of yarn through each other, which creates "stitches". Some of the basic stitches that are invovled in crochet are the chain stitch (which is also known as the foundation stitch), the single crochet, and the double crochet. Beginners must learn how to hold the hook and yarn comfortably, create a starting chain, and build rows or rounds from there. Working one loop at a time makes it very easy to fix any mistakes, which makes crochet a very beginner-friendly entry point into the world of yarn crafts!</p>
         <h2 data-i18n="crochet.supplies.heading">Supplies Needed</h2>
@@ -46,7 +38,7 @@
             <li data-i18n="crochet.supplies.item4">Yarn needle - to weave in ends</li>
         </ul>
         <figure>
-            <img src="pictures/yarn-weight-chart.jpg" alt="Yarn weight categories from lace to bulky." width="330" height="480">
+            <img src="pictures/yarn-weight-chart.jpg" alt="Yarn weight categories from lace to bulky." width="330" height="480" class="responsive-img">
             <figcaption data-i18n="crochet.figure.caption">While medium weight yarn is the most commonly used...there is a wide variety of weights available for different projects!</figcaption>
         </figure>
         <h2 data-i18n="crochet.basic.heading">Basic Stitches</h2>
@@ -68,7 +60,7 @@
         <p data-i18n="crochet.tutorials.body">For visual learners, we have compiled a list of YouTube tutorials that go over some of the basics of crochet.</p>
         <figure>
             <a href="https://www.youtube.com/watch?v=0gHmLDR2QLY&list=PLgLZIwwa8hcFxyjgGGLNPHxaAKTpg5g9B" target="_blank">
-                <img class="video-thumb" src="https://img.youtube.com/vi/0gHmLDR2QLY/hqdefault.jpg" alt="Crochet basic stitches tutorial video thumbnail" width="330" height="250">
+                <img class="video-thumb responsive-img" src="https://img.youtube.com/vi/0gHmLDR2QLY/hqdefault.jpg" alt="Crochet basic stitches tutorial video thumbnail" width="330" height="250">
             </a>
             <figcaption data-i18n="crochet.tutorials.caption">This video covers the basic stitches discussed above, starting with the slip knot and ending with the treble crochet.</figcaption>
         </figure>
@@ -77,6 +69,5 @@
             <p><span class="notranslate" data-i18n="footer.updated">Last updated:</span> <span data-intl-date="2026-04-12"></span></p>
         </footer>
         <script src="script.js"></script>
-        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </body>
 </html>
