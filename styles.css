@@ -121,6 +121,7 @@ figure figcaption {
     border-radius: 6px;
     background-color: #fff;
     font: inherit;
+    color: black;
 }
 
 .question-form button {
@@ -140,7 +141,7 @@ figure figcaption {
 
 .question-form-thankyou {
     margin-top: 6px;
-    color: #6B705C;
+    color: black;
     font-weight: 700;
 }
 
