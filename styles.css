@@ -74,6 +74,14 @@ figure figcaption {
     margin: 6px 0;
     line-height: 1.5;
 }
+.pattern-list li, .pattern-list p {
+    color: black;
+}
+.pattern-list a {
+    color: #BB8588;
+    text-decoration: none;
+}
+
 .filter-btn.active {
     background: #6B705C;
 }
