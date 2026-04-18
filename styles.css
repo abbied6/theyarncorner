@@ -131,7 +131,7 @@ figure figcaption {
     border: 1px solid #6B705C;
     border-radius: 6px;
     background-color: #A5A58D;
-    color: black;
+    color: #6B705C;
     font-weight: 700;
     cursor: pointer;
 }
