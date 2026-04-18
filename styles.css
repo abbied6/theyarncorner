@@ -78,8 +78,8 @@ figure figcaption {
     color: black;
 }
 .pattern-list a {
-    color: #BB8588;
-    text-decoration: none;
+    color: #E5D7C4;
+    text-decoration: underline;
 }
 
 .filter-btn.active {
