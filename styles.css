@@ -107,6 +107,7 @@ figure figcaption {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    color: black !important
 }
 
 .question-form label {
@@ -130,7 +131,7 @@ figure figcaption {
     border: 1px solid #6B705C;
     border-radius: 6px;
     background-color: #A5A58D;
-    color: #6B705C;
+    color: black;
     font-weight: 700;
     cursor: pointer;
 }
